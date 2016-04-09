@@ -6,7 +6,7 @@ Car folkracer;
 
 SR04 front;
 const int TRIGGER_PIN = 6; //Βάλτε την κατάλληλη τιμή για το pin που είναι συνδεδεμένο στο trigger
-const int ECHO_PIN = 7; //Βάλτε την κατάλληλη τιμή για το pin που είναι συνδεδεμένο στο echo
+const int ECHO_PIN = 7; //Βαλτε την κατάλληλη τιμή για το pin που είναι συνδεδεμένο στο echo
 
 void setup() {
   front.attach(TRIGGER_PIN, ECHO_PIN); //αρχικοποιεί τον υπέρηχο
