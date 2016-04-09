@@ -25,5 +25,10 @@ void loop() {
   folkracer.updateMotors(); //διατήρησε την ταχύτητα του αυτοκινήτου σταθερή
   int distance = front.getDistance(); //μέτρησε την απόσταση και αποθήκευσέ την στη μεταβλητή distance
 
-  //TO-DO: Κάντε το αυτοκινητάκι να στρίβει 90 μοίρες προς τα αριστερά όταν βρίσκει ένα κοντινό εμπόδιο και να συνεχίζει την πορεία του
+  if (distance < 20) {
+    folkracer.stop();
+    folkracer.rotate(-90);
+    folkracer.setSpeed(0.5);
+    folkracer.updateMotors();
+  }
 }
