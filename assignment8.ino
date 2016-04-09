@@ -25,10 +25,10 @@ void loop() {
   folkracer.updateMotors(); //διατήρησε την ταχύτητα του αυτοκινήτου σταθερή
   int distance = front.getDistance(); //μέτρησε την απόσταση και αποθήκευσέ την στη μεταβλητή distance
 
-  if (distance < 20) {
-    folkracer.stop();
-    folkracer.rotate(-90);
-    folkracer.setSpeed(0.5);
-    folkracer.updateMotors();
+  if (distance < 20 && distance > 0) { //Όταν η απόσταση από κάποιο εμπόδιο είναι < 20 και >0
+    folkracer.stop(); //Τότε σταμάτα
+    folkracer.rotate(-90); //Στρήψε 90 μοίρες προς τα αριστερά
+    folkracer.setSpeed(0.5); //Ξεκίνα να προχοράς
+
   }
 }
